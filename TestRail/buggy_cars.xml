@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Test Cases</name>
+		<description></description>
+									</section>
+			<section>
+		<name>Registro de Usuarios</name>
+		<description>Verificar la funcionaliadad del módulo de Registro de Usuarios</description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Registrar un nuevo usuario en el sistema, ingresando todos los datos exitosamente (Happy Path)</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado </preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados
+• Clic en Registrar</steps>
+										<expected>El nuevo usuario sea registrado exitosamente</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Registrar un nuevo usuario en el sistema, dejando los campos vacíos</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• No llenar ningún campo
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje o una alerta indicando que no se puede registrar el usuario</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Registrar un nuevo usuario en el sistema, ingresando datos incorrectos (Password 4 caracteres)</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados de forma incorrecta (pass: N@ty)
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje indicando quela contraseña debe tener al menos 6 caracteres</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Registrar un nuevo usuario en el sistema, ingresando datos incorrectos (Password sin mayúscula)</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados de forma incorrecta (pass: natasha2)
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje indicando quela contraseña debe tener al menos una mayúscaula caracteres</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Registrar un nuevo usuario en el sistema, (Password 6 caracteres exactos con 1 mayúscula  + 1 especial)</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados (pass: Natash@)
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje de éxito</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Registrar un nuevo usuario con contraseñas distintas</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados de forma incorrecta (pass: Natash@12 confirm pass: #Include16)
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje indicando que las contraseña deben ser iguales</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Registrar un nuevo usuario ya existente en el sistema</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados exactamente igual que otro registro previo
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje indicando que el usuario no se puede registrar debido a que ya está existente</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Registrar un nuevo usuario con espacios en blanco (space)</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate>600</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>• Tener un navegador
+• Acceso a internet
+• Una herramienta para capturar el resultado</preconds>
+										<steps>• Abrir página https://buggy.justtestit.org/
+• Seleccionar la opción Register
+• Ingresar los datos solicitados sólo con epacios 
+• Clic en Registrar</steps>
+										<expected>Muestre un mensaje indicando que el usuario no se puede registrar debido a que no cumple con las expresiones regulares</expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Actualizar Perfil de Usuarios</name>
+		<description>Verificar la funcionalidad del módulo de Actualizar Perfil de Usuarios</description>
+									</section>
+			<section>
+		<name>Votar por Autos</name>
+		<description>Verificar la funcionalidad del módulo de Votar por Autos</description>
+									</section>
+	</sections>
+</suite>
